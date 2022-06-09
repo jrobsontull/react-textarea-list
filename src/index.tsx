@@ -6,9 +6,9 @@ export interface TextareaListProps {
   onChange?: (value?: string) => void;
 }
 
-const TextAreaList = ({
+const TextareaUL = ({
   style,
-  bulletChar,
+  bulletChar = '-',
   onChange,
 }: TextareaListProps): JSX.Element => {
   const [text, setText] = useState('');
@@ -68,4 +68,4 @@ const TextAreaList = ({
   );
 };
 
-export default TextAreaList;
+export default TextareaUL;
