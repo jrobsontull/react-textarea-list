@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export interface TextareaListProps {
   style?: React.CSSProperties;
   bulletChar?: string;
+  defaultValue?: string;
   onChange?: (value?: string) => void;
 }
 
 const TextareaUL = ({
   style,
   bulletChar = '-',
+  defaultValue = '',
   onChange,
 }: TextareaListProps): JSX.Element => {
   const [text, setText] = useState('');
   const [currentLineNum, setCurrentLineNum] = useState(1);
   const newLineChar: string = '\n' + bulletChar;
+  const bulletCharLen: number = bulletChar.length;
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     const newText: string = e.target.value;
@@ -28,12 +31,16 @@ const TextareaUL = ({
 
     let joined: string = newTextList.join(newLineChar);
 
-    if (joined.charAt(0) !== bulletChar && joined.length !== 0) {
-      // Add additional marker
-      joined = '-' + joined;
-    } else if (joined.length === 1 && joined === bulletChar) {
+    if (joined.length === bulletCharLen && joined === bulletChar) {
       // Empty so remove marker
       joined = '';
+    } else if (
+      joined.length > 0 &&
+      joined.length <= bulletCharLen &&
+      joined.slice(0, bulletCharLen) !== bulletChar
+    ) {
+      // Add additional marker
+      joined = bulletChar + joined;
     }
 
     setText(joined);
@@ -41,9 +48,13 @@ const TextareaUL = ({
     // Run onChange event
     if (onChange) {
       let vanillaText = newTextList.join('\n');
-      if (vanillaText.charAt(0) === bulletChar) {
-        vanillaText = vanillaText.slice(1);
+      if (
+        vanillaText.length >= bulletCharLen &&
+        vanillaText.slice(0, bulletCharLen) === bulletChar
+      ) {
+        vanillaText = vanillaText.slice(bulletCharLen);
       }
+
       onChange(vanillaText);
     }
   };
@@ -53,10 +64,20 @@ const TextareaUL = ({
   ): void => {
     if (e.key === 'Enter') {
       setCurrentLineNum(currentLineNum + 1);
-    } else if (e.key === 'Backspace' && text.slice(-2) === newLineChar) {
+    } else if (
+      e.key === 'Backspace' &&
+      text.slice(-newLineChar.length) === newLineChar
+    ) {
       setCurrentLineNum(currentLineNum - 1);
     }
   };
+
+  // Update textarea with default value
+  useEffect(() => {
+    if (defaultValue.length > 0) {
+      setText(bulletChar + defaultValue);
+    }
+  }, [defaultValue]);
 
   return (
     <textarea
