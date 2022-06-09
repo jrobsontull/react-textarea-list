@@ -1,0 +1,49 @@
+{
+  "name": "react-textarea-list",
+  "description": "Unordered and ordered list Textarea components.",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "textarea",
+    "list",
+    "typescript",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrobsontull/react-textarea-list.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "author": "jrobsontull",
+  "bugs": {
+    "url": "https://github.com/jrobsontull/react-textarea-list/issues"
+  },
+  "homepage": "https://github.com/jrobsontull/react-textarea-list#readme",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.12",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^16.8.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "typescript": "^4.7.3"
+  }
+}
