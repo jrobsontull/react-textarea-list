@@ -4,6 +4,7 @@ export interface TextareaListProps {
   style?: React.CSSProperties;
   bulletChar?: string;
   defaultValue?: string;
+  placeholder?: string;
   onChange?: (value?: string) => void;
 }
 
@@ -11,6 +12,7 @@ const TextareaUL = ({
   style,
   bulletChar = '-',
   defaultValue = '',
+  placeholder,
   onChange,
 }: TextareaListProps): JSX.Element => {
   const [text, setText] = useState('');
@@ -79,12 +81,15 @@ const TextareaUL = ({
     }
   }, [defaultValue]);
 
+  console.log(placeholder);
+
   return (
     <textarea
       style={style}
       value={text}
       onChange={handleChange}
       onKeyDown={handleKeyPress}
+      placeholder={placeholder}
     ></textarea>
   );
 };
