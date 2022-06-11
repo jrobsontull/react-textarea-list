@@ -5,7 +5,8 @@ export interface TextareaListProps {
   bulletChar?: string;
   defaultValue?: string;
   placeholder?: string;
-  onChange?: (value?: string) => void;
+  listOutput?: boolean;
+  onChange?: (value?: string | string[]) => void;
 }
 
 const TextareaUL = ({
@@ -13,6 +14,7 @@ const TextareaUL = ({
   bulletChar = '-',
   defaultValue = '',
   placeholder,
+  listOutput = true,
   onChange,
 }: TextareaListProps): JSX.Element => {
   const [text, setText] = useState('');
@@ -47,8 +49,9 @@ const TextareaUL = ({
 
     setText(joined);
 
-    // Run onChange event
-    if (onChange) {
+    // Run onChange event and output current text
+    if (onChange && !listOutput) {
+      // Output vanilla text
       let vanillaText = newTextList.join('\n');
       if (
         vanillaText.length >= bulletCharLen &&
@@ -58,6 +61,19 @@ const TextareaUL = ({
       }
 
       onChange(vanillaText);
+    } else if (onChange) {
+      // Output list
+      let currentTextList = newTextList;
+      let firstElem = currentTextList[0];
+      if (
+        firstElem.length >= bulletCharLen &&
+        firstElem.slice(0, bulletCharLen) === bulletChar
+      ) {
+        // Remove leading bullet char
+        firstElem = firstElem.slice(bulletCharLen);
+        currentTextList[0] = firstElem;
+      }
+      onChange(currentTextList);
     }
   };
 
@@ -80,8 +96,6 @@ const TextareaUL = ({
       setText(bulletChar + defaultValue);
     }
   }, [defaultValue]);
-
-  console.log(placeholder);
 
   return (
     <textarea

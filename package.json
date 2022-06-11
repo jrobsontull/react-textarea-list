@@ -32,17 +32,19 @@
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
-  "dependencies": {},
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.8.0",
     "@types/react-dom": "^16.8.0",
+    "@types/react-syntax-highlighter": "^15.5.2",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "highlight.js": "^11.5.1",
     "parcel": "^2.6.0",
     "react": "^16.8.0",
+    "react-ace": "^10.1.0",
     "react-dom": "^16.8.0",
     "rollup": "^2.75.6",
     "rollup-plugin-typescript2": "^0.32.1",
