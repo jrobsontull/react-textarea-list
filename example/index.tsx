@@ -4,9 +4,9 @@ import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-tomorrow';
 
-import TextareaUL from '../src';
+import { TextareaUL, TextareaOL } from '../src';
 
-const textareaULExample = `import TextareaUL from 'react-textarea-list';
+const textareaULExample = `import { TextareaUL } from 'react-textarea-list';
 
 const ExamplePage = () => {
   return (
@@ -60,7 +60,7 @@ const Example = () => {
           <div className="block">
             <h2>React &lt;TextareaOL /&gt; component</h2>
             <p>Use this if you want an ordered list.</p>
-            <TextareaUL placeholder="Type here to see the magic..." />
+            <TextareaOL placeholder="Type here to see the magic..." />
           </div>
         </div>
         <div className="right">
