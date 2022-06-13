@@ -2,6 +2,6 @@
   "private": true,
   "scripts": {
     "dev": "parcel ./index.html --no-cache --open",
-    "start": "parcel build ./index.html --dist-dir ./dist"
+    "build": "parcel build ./index.html --dist-dir ./dist"
   }
 }

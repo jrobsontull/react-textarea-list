@@ -8,6 +8,15 @@ Drop-in replacement for the textarea component which automatically arranges user
 
 ## Demo
 
+Coming soon! In the meantime, feel perform the following commands to run the example project on your local machine.
+
+```bash
+git clone https://github.com/jrobsontull/react-textarea-list.git
+cd react-textarea-list
+npm install
+npm run start:example
+```
+
 ## Usage
 
 For an unordered list, import the `TextareaUL` component. You can customise the bullet character and use this component as a normal `<textarea />` element as this component exposes the usual properties.
