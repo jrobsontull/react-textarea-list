@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/jrobsontull/react-textarea-list.git"
   },
-  "license": "MIT",
+  "license": "ISC",
   "private": false,
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
