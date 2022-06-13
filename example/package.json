@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "parcel ./index.html --no-cache --open",
-    "build": "parcel build ./index.html --dist-dir ./dist"
+    "dev": "parcel ./index.html --no-cache --open",
+    "start": "parcel build ./index.html --dist-dir ./dist"
   }
 }

@@ -31,9 +31,12 @@
   "scripts": {
     "build:dev": "rollup -c",
     "start:dev": "rollup -c -w",
-    "start": "cd example && parcel ./index.html --no-cache --open"
+    "start": "cd example && npm run start"
   },
   "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
