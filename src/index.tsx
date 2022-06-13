@@ -11,7 +11,6 @@ export interface TextareaULProps {
 
 export interface TextareaOLProps {
   style?: React.CSSProperties;
-  defaultValue?: string;
   placeholder?: string;
   listOutput?: boolean;
   onChange?: (value?: string | string[]) => void;
@@ -118,7 +117,6 @@ const TextareaUL = ({
 
 const TextareaOL = ({
   style,
-  defaultValue = '',
   placeholder,
   listOutput = true,
   onChange,

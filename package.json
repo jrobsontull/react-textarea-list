@@ -29,8 +29,9 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w"
+    "build:dev": "rollup -c",
+    "start:dev": "rollup -c -w",
+    "start": "cd example && parcel ./index.html --no-cache --open"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"

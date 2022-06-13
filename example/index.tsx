@@ -6,7 +6,7 @@ import 'ace-builds/src-noconflict/theme-tomorrow';
 
 import { TextareaUL, TextareaOL } from '../src';
 
-const textareaULExample = `import { TextareaUL } from 'react-textarea-list';
+const textareaUlExample = `import { TextareaUL } from 'react-textarea-list';
 
 const ExamplePage = () => {
   return (
@@ -19,8 +19,22 @@ const ExamplePage = () => {
 export default ExamplePage;
 `;
 
+const textareaOlExample = `import { TextareaOL } from 'react-textarea-list';
+
+const ExamplePage = () => {
+  return (
+    <div className="content">
+      <TextareaOL placeholder="Type here to see the magic..." />
+    </div>
+  );
+}
+              
+export default ExamplePage;
+`;
+
 const Example = () => {
   const [openUlCode, setOpenUlCode] = useState(false);
+  const [openOlCode, setOpenOlCode] = useState(false);
 
   return (
     <div className="container">
@@ -47,7 +61,7 @@ const Example = () => {
               <AceEditor
                 mode="javascript"
                 theme="tomorrow"
-                value={textareaULExample}
+                value={textareaUlExample}
                 style={{ width: '100%', marginTop: '16px' }}
                 showGutter={true}
                 highlightActiveLine={false}
@@ -61,6 +75,25 @@ const Example = () => {
             <h2>React &lt;TextareaOL /&gt; component</h2>
             <p>Use this if you want an ordered list.</p>
             <TextareaOL placeholder="Type here to see the magic..." />
+            <div
+              className="showCodeBtn"
+              onClick={() => setOpenOlCode(!openOlCode)}
+            >
+              {`<>`} Show source
+            </div>
+            {openOlCode ? (
+              <AceEditor
+                mode="javascript"
+                theme="tomorrow"
+                value={textareaOlExample}
+                style={{ width: '100%', marginTop: '16px' }}
+                showGutter={true}
+                highlightActiveLine={false}
+                maxLines={12}
+              ></AceEditor>
+            ) : (
+              ''
+            )}
           </div>
         </div>
         <div className="right">
@@ -91,7 +124,7 @@ const Example = () => {
                   <td>React.CSSProperties</td>
                   <td>false</td>
                   <td>n/a</td>
-                  <td>Used for in-line styling of the textarea element.</td>
+                  <td>Use for in-line styling of the textarea element.</td>
                 </tr>
                 <tr>
                   <td>bulletChar</td>
@@ -134,8 +167,8 @@ const Example = () => {
                   <td>false</td>
                   <td>n/a</td>
                   <td>
-                    Fired on every onChange event of the textarea. Works
-                    similarly to vanilla textarea onChange property.
+                    Called on every onChange event of the textarea. Works
+                    similarly to vanilla textarea onChange event.
                   </td>
                 </tr>
               </tbody>
