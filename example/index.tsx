@@ -40,7 +40,7 @@ const Example = () => {
     <div className="container">
       <div className="header">
         <h1>React Listed Textarea Example</h1>
-        <p>v1.0.1</p>
+        <p>v1.0.3</p>
       </div>
       <div className="content">
         <div className="left">
@@ -103,7 +103,7 @@ const Example = () => {
           </div>
           <div className="block">
             <h2>About</h2>
-            <p>Some text here.</p>
+            <p>Made by <a href="https://github.com/jrobsontull" target="_blank">jrobsontull<a/>.</p>
           </div>
           <div className="block">
             <h2>Props {`<TextareaUL />`}</h2>

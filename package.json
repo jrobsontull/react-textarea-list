@@ -1,7 +1,7 @@
 {
   "name": "react-textarea-list",
   "description": "Unordered and ordered list Textarea components.",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "keywords": [
     "react",
     "textarea",
@@ -31,7 +31,8 @@
   "scripts": {
     "build": "rollup -c",
     "start:dev": "rollup -c -w",
-    "start:example": "cd ./example && npm run dev"
+    "start:example": "cd ./example && npm run dev",
+    "clean": "rm -rf node_modules/"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"

@@ -18,7 +18,7 @@ export interface TextareaOLProps {
 
 const TextareaUL = ({
   style,
-  bulletChar = '-',
+  bulletChar = '- ',
   defaultValue = '',
   placeholder,
   listOutput = true,
