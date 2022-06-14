@@ -29,7 +29,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build:dev": "rollup -c",
+    "build": "rollup -c",
     "start:dev": "rollup -c -w",
     "start:example": "cd ./example && npm run dev"
   },
