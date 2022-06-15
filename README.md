@@ -8,12 +8,13 @@ Drop-in replacement for the textarea component which automatically arranges user
 
 ## Demo
 
-TextareaUL:
+This package exposes two different list components - an unordered list and an ordered list. Both these components work like vanilla `<textarea />` elements and can be styled with CSS the same way.
 
 ![](.images/textarea_ul.gif)
+
 ![](.images/textarea_ol.gif)
 
-Also feel free to run the following commands to load the example on your local machine.
+Feel free to run the following commands to load the example on your local machine.
 
 ```bash
 git clone https://github.com/jrobsontull/react-textarea-list.git
