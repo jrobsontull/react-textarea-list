@@ -8,7 +8,12 @@ Drop-in replacement for the textarea component which automatically arranges user
 
 ## Demo
 
-Coming soon! In the meantime, feel perform the following commands to run the example project on your local machine.
+TextareaUL:
+
+![](.images/textarea_ul.gif)
+![](.images/textarea_ol.gif)
+
+Also feel free to run the following commands to load the example on your local machine.
 
 ```bash
 git clone https://github.com/jrobsontull/react-textarea-list.git

@@ -103,7 +103,13 @@ const Example = () => {
           </div>
           <div className="block">
             <h2>About</h2>
-            <p>Made by <a href="https://github.com/jrobsontull" target="_blank">jrobsontull<a/>.</p>
+            <p>
+              Made by{' '}
+              <a href="https://github.com/jrobsontull" target="_blank">
+                jrobsontull
+              </a>
+              .
+            </p>
           </div>
           <div className="block">
             <h2>Props {`<TextareaUL />`}</h2>
