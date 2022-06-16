@@ -32,7 +32,8 @@
     "build": "rollup -c",
     "start:dev": "rollup -c -w",
     "start:example": "cd ./example && npm run dev",
-    "clean": "rm -rf node_modules/"
+    "clean": "rm -rf node_modules/",
+    "lint": "eslint src/*.tsx"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
@@ -41,8 +42,12 @@
     "@types/react": "^16.8.0",
     "@types/react-dom": "^16.8.0",
     "@types/react-syntax-highlighter": "^15.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "eslint": "^8.17.0",
+    "eslint-plugin-react": "^7.30.0",
     "highlight.js": "^11.5.1",
     "parcel": "^2.6.0",
     "react": "^16.8.0",
