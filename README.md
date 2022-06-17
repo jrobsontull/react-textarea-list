@@ -1,6 +1,7 @@
 # react-textarea-list
 
 [![npm version](https://badge.fury.io/js/react-textarea-list.svg)](https://badge.fury.io/js/react-textarea-list)
+![npm bundle size](https://img.shields.io/bundlephobia/min/react-textarea-list)
 
 Drop-in replacement for the textarea component which automatically arranges user input into either unordered or ordered lists.
 

@@ -40,7 +40,7 @@ const Example = () => {
     <div className="container">
       <div className="header">
         <h1>React Listed Textarea Example</h1>
-        <p>v1.0.4</p>
+        <p>v1.0.5</p>
       </div>
       <div className="content">
         <div className="left">
