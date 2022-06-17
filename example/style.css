@@ -61,6 +61,19 @@ body {
   margin-left: 15px;
 }
 
+@media screen and (max-width: 1300px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    width: calc(70% - 32px);
+    margin: 0;
+  }
+}
+
 .block {
   display: flex;
   flex-direction: column;
@@ -129,4 +142,27 @@ p#terminal {
 .showCodeBtn:hover {
   background-color: #d0d9e3;
   cursor: pointer;
+}
+
+table {
+  border: 1px solid #d1d5db;
+  border-collapse: collapse separate;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  margin: 6px 0 10px 0;
+}
+
+thead tr th {
+  padding: 12px;
+  vertical-align: middle;
+  text-align: left;
+  font-weight: 500;
+}
+
+tbody tr td {
+  padding: 10px 12px;
+}
+
+.right .block p {
+  margin-bottom: 10px;
 }
