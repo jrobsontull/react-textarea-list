@@ -59,7 +59,7 @@ const TextareaUL = ({
     // Run onChange event and output current text
     if (onChange && !listOutput) {
       // Output vanilla text
-      let vanillaText = newTextList.join('\n');
+      let vanillaText: string = newTextList.join('\n');
       if (
         vanillaText.length >= bulletCharLen &&
         vanillaText.slice(0, bulletCharLen) === bulletChar
@@ -70,8 +70,8 @@ const TextareaUL = ({
       onChange(vanillaText);
     } else if (onChange) {
       // Output list
-      let currentTextList = newTextList;
-      let firstElem = currentTextList[0];
+      const currentTextList: string[] = newTextList;
+      let firstElem: string = currentTextList[0];
       if (
         firstElem.length >= bulletCharLen &&
         firstElem.slice(0, bulletCharLen) === bulletChar
@@ -133,13 +133,13 @@ const TextareaOL = ({
       newTextList.pop();
     }
 
-    let cleanedTextList: string[] = [];
+    const cleanedTextList: string[] = [];
     newTextList.forEach((line: string) => {
       const cleanLine = line.replace(/\d+. /, '');
       cleanedTextList.push(cleanLine);
     });
 
-    let joined: string = '';
+    let joined = '';
     cleanedTextList.forEach((line: string, index: number) => {
       joined += '\n' + (index + 1) + '. ' + line;
     });

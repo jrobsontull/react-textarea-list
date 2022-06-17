@@ -105,7 +105,7 @@ const Example = () => {
             <h2>About</h2>
             <p>
               Made by{' '}
-              <a href="https://github.com/jrobsontull" target="_blank">
+              <a href="https://github.com/jrobsontull" rel="noopener">
                 jrobsontull
               </a>
               .
@@ -113,7 +113,6 @@ const Example = () => {
           </div>
           <div className="block">
             <h2>Props {`<TextareaUL />`}</h2>
-            <p></p>
             <table>
               <thead>
                 <tr>
@@ -126,11 +125,25 @@ const Example = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>style</td>
-                  <td>React.CSSProperties</td>
+                  <td>onChange</td>
+                  <td>{`(value?: string | string[]) => void`}</td>
                   <td>false</td>
                   <td>n/a</td>
-                  <td>Use for in-line styling of the textarea element.</td>
+                  <td>
+                    Called on every onChange event of the textarea. Works
+                    similarly to vanilla textarea onChange event.
+                  </td>
+                </tr>
+                <tr>
+                  <td>listOutput</td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>true</td>
+                  <td>
+                    When set to true, the onChange event returns a list of
+                    elements denoting each line. When false, the vanilla text
+                    with new line characters is returned.
+                  </td>
                 </tr>
                 <tr>
                   <td>bulletChar</td>
@@ -154,7 +167,40 @@ const Example = () => {
                   <td>string</td>
                   <td>false</td>
                   <td>n/a</td>
-                  <td>Use to set the placeholder text of the textarea.</td>
+                  <td>Use to set the placeholder value of the textarea.</td>
+                </tr>
+                <tr>
+                  <td>style</td>
+                  <td>React.CSSProperties</td>
+                  <td>false</td>
+                  <td>n/a</td>
+                  <td>Use for in-line styling of the textarea element.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="block">
+            <h2>Props {`<TextareaOL />`}</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Prop Name</th>
+                  <th>Type</th>
+                  <th>Required</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>onChange</td>
+                  <td>{`(value?: string | string[]) => void`}</td>
+                  <td>false</td>
+                  <td>n/a</td>
+                  <td>
+                    Called on every onChange event of the textarea. Works
+                    similarly to vanilla textarea onChange event.
+                  </td>
                 </tr>
                 <tr>
                   <td>listOutput</td>
@@ -168,14 +214,18 @@ const Example = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td>onChange</td>
-                  <td>{`(value?: string | string[]) => void`}</td>
+                  <td>placeholder</td>
+                  <td>string</td>
                   <td>false</td>
                   <td>n/a</td>
-                  <td>
-                    Called on every onChange event of the textarea. Works
-                    similarly to vanilla textarea onChange event.
-                  </td>
+                  <td>Use to set the placeholder value of the textarea.</td>
+                </tr>
+                <tr>
+                  <td>style</td>
+                  <td>React.CSSProperties</td>
+                  <td>false</td>
+                  <td>n/a</td>
+                  <td>Use for in-line styling of the textarea element.</td>
                 </tr>
               </tbody>
             </table>
