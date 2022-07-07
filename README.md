@@ -79,14 +79,64 @@ The ordered and unordered textarea components expose slightly different props.
 | `listOutput`   | `boolean`                    | false    | `true`        | When set to true, the onChange event returns a list of elements denoting each line. When false, the vanilla text with new line characters is returned. |
 | `bulletChar`   | `string`                     | false    | `-`           | Character used as bullet points. Does not have to be a single character.                                                                               |
 | `defaultValue` | `string`                     | false    | n/a           | Use to set the default value of the textarea.                                                                                                          |
-| `placeholder`  | `string`                     | false    | n/a           | Use to set the placeholder value of the textarea.                                                                                                      |
-| `style`        | `React.CSSProperties`        | false    | n/a           | Used for in-line styling of the textarea element.                                                                                                      |
 
 <h3 align="center" >TextareaOL</h3>
 
-| Prop Name     | Type                         | Required | Default Value | Description                                                                                                                                            |
-| ------------- | ---------------------------- | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `onChange`    | `(values: string[]) => void` | false    | n/a           | Called on every onChange event of the textarea. Works similarly to vanilla textarea onChange event.                                                    |
-| `listOutput`  | `boolean`                    | false    | `true`        | When set to true, the onChange event returns a list of elements denoting each line. When false, the vanilla text with new line characters is returned. |
-| `placeholder` | `string`                     | false    | n/a           | Use to set the placeholder value of the textarea.                                                                                                      |
-| `style`       | `React.CSSProperties`        | false    | n/a           | Used for in-line styling of the textarea element.                                                                                                      |
+| Prop Name    | Type                         | Required | Default Value | Description                                                                                                                                            |
+| ------------ | ---------------------------- | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `onChange`   | `(values: string[]) => void` | false    | n/a           | Called on every onChange event of the textarea. Works similarly to vanilla textarea onChange event.                                                    |
+| `listOutput` | `boolean`                    | false    | `true`        | When set to true, the onChange event returns a list of elements denoting each line. When false, the vanilla text with new line characters is returned. |
+
+Apart from these, the component accepts all props that are accepted by `<textarea/>`, like `style`, `onChange`, `value`, etc.
+
+## FAQ
+
+#### How do I assign a `ref` to the component?
+
+```javascript
+import { createRef, useEffect } from 'react';
+import { TextareaUL } from 'react-textarea-list';
+
+const ExamplePage = () => {
+  const myRef = createRef();
+
+  useEffect(() => {
+    console.log(myRef.current);
+  }, []);
+
+  return (
+    <div className="content">
+      <TextareaUL ref={myRef} />
+    </div>
+  );
+};
+
+export default ExamplePage;
+```
+
+#### How do I focus the component?
+
+```javascript
+import { createRef, useEffect } from 'react';
+import { TextareaUL } from 'react-textarea-list';
+
+const ExamplePage = () => {
+  const myRef = createRef();
+
+  useEffect(() => {
+    myRef.current.focus();
+  }, []);
+
+  return (
+    <div className="content">
+      <TextareaUL ref={myRef} />
+    </div>
+  );
+};
+
+export default ExamplePage;
+```
+
+#### How do I autofocus the component?
+
+`<TextareaUL autofocus />`

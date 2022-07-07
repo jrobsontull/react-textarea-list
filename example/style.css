@@ -97,6 +97,18 @@ body {
   width: 100%;
 }
 
+.block a {
+  color: #1e293b;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.block a:hover {
+  color: #64748b;
+  cursor: pointer;
+}
+
 textarea {
   border: 1px solid #64748b;
   background-color: #f8fafc;

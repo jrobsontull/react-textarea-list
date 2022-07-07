@@ -40,7 +40,7 @@ const Example = () => {
     <div className="container">
       <div className="header">
         <h1>React Listed Textarea Example</h1>
-        <p>v1.0.5</p>
+        <p>v1.0.6</p>
       </div>
       <div className="content">
         <div className="left">
@@ -74,7 +74,10 @@ const Example = () => {
           <div className="block">
             <h2>React &lt;TextareaOL /&gt; component</h2>
             <p>Use this if you want an ordered list.</p>
-            <TextareaOL placeholder="Type here to see the magic..." />
+            <TextareaOL
+              placeholder="Type here to see the magic..."
+              defaultValue="memes"
+            />
             <div
               className="showCodeBtn"
               onClick={() => setOpenOlCode(!openOlCode)}
@@ -162,20 +165,6 @@ const Example = () => {
                   <td>n/a</td>
                   <td>Use to set the default value of the textarea.</td>
                 </tr>
-                <tr>
-                  <td>placeholder</td>
-                  <td>string</td>
-                  <td>false</td>
-                  <td>n/a</td>
-                  <td>Use to set the placeholder value of the textarea.</td>
-                </tr>
-                <tr>
-                  <td>style</td>
-                  <td>React.CSSProperties</td>
-                  <td>false</td>
-                  <td>n/a</td>
-                  <td>Use for in-line styling of the textarea element.</td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -212,20 +201,6 @@ const Example = () => {
                     elements denoting each line. When false, the vanilla text
                     with new line characters is returned.
                   </td>
-                </tr>
-                <tr>
-                  <td>placeholder</td>
-                  <td>string</td>
-                  <td>false</td>
-                  <td>n/a</td>
-                  <td>Use to set the placeholder value of the textarea.</td>
-                </tr>
-                <tr>
-                  <td>style</td>
-                  <td>React.CSSProperties</td>
-                  <td>false</td>
-                  <td>n/a</td>
-                  <td>Use for in-line styling of the textarea element.</td>
                 </tr>
               </tbody>
             </table>
