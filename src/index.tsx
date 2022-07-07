@@ -211,4 +211,7 @@ const TextareaOL = forwardRef(
   }
 );
 
+TextareaUL.displayName = 'TextareaUL';
+TextareaOL.displayName = 'TextareaOL';
+
 export { TextareaUL, TextareaOL };

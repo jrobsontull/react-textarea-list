@@ -32,7 +32,8 @@
     "build": "rollup -c",
     "start:dev": "rollup -c -w",
     "start:example": "cd ./example && npm run dev",
-    "clean": "rm -rf node_modules/",
+    "clean:bash": "rm -rf node_modules/",
+    "clean:powershell": "rd /s /q \"node_modules/\"",
     "lint": "eslint \"src/*.tsx\" \"example/*.tsx\"",
     "format": "prettier --write --config .prettierrc \"src/*.tsx\" \"example/*.tsx\""
   },
