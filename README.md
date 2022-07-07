@@ -139,4 +139,6 @@ export default ExamplePage;
 
 #### How do I autofocus the component?
 
-`<TextareaUL autofocus />`
+```javascript
+<TextareaUL autofocus />
+```
