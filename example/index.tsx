@@ -74,10 +74,7 @@ const Example = () => {
           <div className="block">
             <h2>React &lt;TextareaOL /&gt; component</h2>
             <p>Use this if you want an ordered list.</p>
-            <TextareaOL
-              placeholder="Type here to see the magic..."
-              defaultValue="memes"
-            />
+            <TextareaOL placeholder="Type here to see the magic..." />
             <div
               className="showCodeBtn"
               onClick={() => setOpenOlCode(!openOlCode)}

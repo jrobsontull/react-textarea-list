@@ -148,13 +148,20 @@ const TextareaOL = forwardRef(
         cleanedTextList.push(cleanLine);
       });
 
-      let joined = '';
-      cleanedTextList.forEach((line: string, index: number) => {
-        joined += '\n' + (index + 1) + '. ' + line;
-      });
-      joined = joined.slice(1);
+      if (cleanedTextList[0] === '' && cleanedTextList.length === 0) {
+        // Clear textarea
+        setText('');
+        setCurrentLineNum(1);
+      } else {
+        // Update textarea with formatted text
+        let joined = '';
+        cleanedTextList.forEach((line: string, index: number) => {
+          joined += '\n' + (index + 1) + '. ' + line;
+        });
+        joined = joined.slice(1);
 
-      setText(joined);
+        setText(joined);
+      }
 
       // Run onChange event and output current text
       if (onChange && !listOutput) {
